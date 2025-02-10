@@ -1,3 +1,8 @@
+val exposed_version: String by project
+val ktor_version: String by project
+val logback_version: String by project
+
+
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
@@ -27,5 +32,13 @@ dependencies {
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
 
-    implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+//    implementation("ch.qos.logback-classic:$logback_version")
+
+    implementation("org.postgresql:postgresql:42.7.2")
+
+    implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+    implementation("org.jetbrains.exposed:exposed-dao:${exposed_version}")
+    implementation("org.jetbrains.exposed:exposed-jdbc:${exposed_version}")
+
 }

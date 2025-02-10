@@ -4,7 +4,7 @@ import ch.qos.logback.core.subst.Token
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class LoginReceiveRemoteModel(
+data class LoginReceiveRemote(
     val login: String,
     val password: String
 )

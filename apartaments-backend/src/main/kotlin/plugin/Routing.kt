@@ -12,8 +12,8 @@ data class Test(
 
 fun Application.configureRouting() {
     routing {
-        get("/login") {
-            call.respond(Test("TEST"))
+        get("/") {
+          call.respondText("Hello, World")
         }
     }
 }
