@@ -1,7 +1,9 @@
 package com.example.database.tokens
 
-data class TokenDTO (
-    val id: Int,
-    val login: String,
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class TokenDTO(
+    val userId: Int,
     val token: String
 )

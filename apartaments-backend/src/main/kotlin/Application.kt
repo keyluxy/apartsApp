@@ -1,7 +1,8 @@
 package com.example
 
-import com.example.features.login.configureLoginRouting
-import com.example.features.registration.configureRegistrationRouting
+//import com.example.features.login.configureLoginRouting
+//import com.example.features.registration.configureRegistrationRouting
+import com.example.features.auth.authRoutes
 import com.example.plugin.configureRouting
 import com.example.plugin.configureSerialization
 import io.ktor.server.application.*
@@ -20,7 +21,8 @@ fun main() {
 
 fun Application.module() {
     configureSerialization()
-    configureLoginRouting()
-    configureRegistrationRouting()
+//    configureLoginRouting()
+//    configureRegistrationRouting()
+    authRoutes()
     configureRouting()
 }
